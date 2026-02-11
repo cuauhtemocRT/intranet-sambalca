@@ -1,0 +1,152 @@
+:root {
+    --azul-oscuro: #003356;
+    --azul-claro: #f4f7f9;
+    --texto: #333;
+    --blanco: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--azul-claro);
+    color: var(--texto);
+}
+
+/* Header superior */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo { height: 50px; margin-right: 15px; }
+
+.top-header h1 {
+    font-size: 1.2rem;
+    color: var(--azul-oscuro);
+    letter-spacing: 1px;
+}
+
+.top-nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--azul-oscuro);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Menú Principal Azul */
+.main-nav {
+    background-color: var(--azul-oscuro);
+    padding: 0 50px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    background-color: var(--blanco);
+    color: var(--azul-oscuro);
+}
+
+/* Cuadrícula de Contenido */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.card {
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid var(--azul-oscuro);
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 1.1rem;
+    color: var(--azul-oscuro);
+    margin: 0;
+}
+
+.number {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: var(--azul-oscuro);
+}
+
+.card ul {
+    list-style: none;
+    padding-left: 30px;
+}
+
+.card ul li {
+    margin-bottom: 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+.card ul li::before {
+    content: "•";
+    color: var(--azul-oscuro);
+    font-weight: bold;
+    position: absolute;
+    left: -15px;
+}
+
+.card ul li:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Botón Volver Arriba */
+#scrollTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #76b852; /* Verde según tu imagen */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+}
